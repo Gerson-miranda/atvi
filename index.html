@@ -21,7 +21,7 @@
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">Entrar</a></button>
+                        <button type="button" onclick="mostrarVideo()">Entrar</a></button>
                     </div>
                 </div>
 
@@ -92,6 +92,19 @@
             </form>
         </div>
     </div>
+    <!-- VIDEO POPUP -->
+    <div id="videoLogin">
+        <div class="video-box">
+            <video id="meuVideo" autoplay loop muted>
+                <source src="assets/video/login.mp4" type="video/mp4">
+            </video>
+
+            <!-- BOTÃO VOLTAR -->
+            <button class="btn-voltar" onclick="fecharVideo()">← Voltar</button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

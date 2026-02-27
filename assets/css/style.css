@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -15,6 +16,7 @@ body {
     background: #003bfd80;
 }
 
+/* CONTAINER PRINCIPAL */
 .container {
     width: 80%;
     height: 80vh;
@@ -22,6 +24,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
 }
 
+/* IMAGEM */
 .form-image {
     width: 50%;
     display: flex;
@@ -35,6 +38,7 @@ body {
     width: 31rem;
 }
 
+/* FORM */
 .form {
     width: 50%;
     display: flex;
@@ -62,16 +66,14 @@ body {
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 .login-button button:hover {
     background-color: #3027e9f1;
-}
-
-.login-button button a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
+    transform: translateY(-2px);
 }
 
 .form-header h1::after {
@@ -85,6 +87,7 @@ body {
     border-radius: 10px;
 }
 
+/* INPUTS */
 .input-group {
     display: flex;
     flex-wrap: wrap;
@@ -126,6 +129,7 @@ body {
     color: #000000be;
 }
 
+/* GENERO */
 .gender-group {
     display: flex;
     justify-content: space-between;
@@ -148,6 +152,7 @@ body {
     color: #000000c0;
 }
 
+/* BOTÃO CONTINUAR */
 .continue-button button {
     width: 100%;
     margin-top: 2.5rem;
@@ -156,26 +161,30 @@ body {
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
+    color: #fff;
+    font-size: 0.93rem;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 .continue-button button:hover {
     background-color: #6b63fff1;
+    transform: translateY(-2px);
 }
 
-.continue-button button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
-}
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
 
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
     }
+
     .container {
         width: 50%;
     }
+
     .form {
         width: 100%;
     }
@@ -186,6 +195,7 @@ body {
         width: 90%;
         height: auto;
     }
+
     .input-group {
         flex-direction: column;
         z-index: 5;
@@ -194,16 +204,65 @@ body {
         overflow-y: scroll;
         flex-wrap: nowrap;
     }
+
     .gender-inputs {
         margin-top: 2rem;
     }
+
     .gender-group {
         flex-direction: column;
     }
+
     .gender-title h6 {
         margin: 0;
     }
+
     .gender-input {
         margin-top: 0.5rem;
     }
+}
+
+/* ============================= */
+/* VIDEO POPUP (FIX RESPONSIVO) */
+/* ============================= */
+
+#videoLogin {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.video-box {
+    position: relative;
+}
+
+#videoLogin video {
+    width: min(90vw, 700px);
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* BOTÃO VOLTAR */
+.btn-voltar {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #6c63ff;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #574fff;
+    transform: translateY(-2px);
 }
